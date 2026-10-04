@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lavanya | Portfolio</title>
+<meta name="description" content="Portfolio of Lavanya, B.E. CSE student at SRM Valliammai Engineering College, learning Python.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--night:#07040f;--panel:#140b28;--line:#33205f;--purple:#b57bff;--violet:#7a3cff;--pink:#ff6ad5;--gold:#ffd86b;--cyan:#6fe7ff;--lav:#e9dcff;--text:#f3edff;--muted:#b3a6d3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(900px 520px at 85% -8%,rgba(122,60,255,.32),transparent 60%),radial-gradient(700px 500px at -10% 45%,rgba(255,106,213,.14),transparent 60%),var(--night);color:var(--text);font-family:"DM Sans",system-ui,sans-serif;line-height:1.7}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+svg.i{width:1em;height:1em;fill:currentColor;display:inline-block;vertical-align:-.12em}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:rgba(7,4,15,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
+.logo{font-family:Syne,sans-serif;font-weight:800;text-decoration:none;color:var(--pink)}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-size:.95rem}
+nav a:hover{color:var(--purple);text-shadow:0 0 12px var(--violet)}
+
+/* hero */
+.hero{position:relative;text-align:center;padding:90px 0 80px;overflow:hidden}
+.hero .hi{color:var(--muted);font-size:1.3rem}
+h1{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(3.6rem,17vw,9rem);line-height:1;margin:6px 0 16px;color:#fff;text-shadow:0 0 8px var(--purple),0 0 30px var(--violet),0 0 70px var(--violet);animation:neon 1.4s ease-out both}
+@keyframes neon{0%,18%,22%,55%{opacity:.25;text-shadow:none}20%,60%,100%{opacity:1}}
+.goal{font-family:Syne,sans-serif;font-weight:600;font-size:clamp(1.1rem,3.4vw,1.6rem)}
+.where{color:var(--muted);margin-top:6px}
+.seven{display:flex;justify-content:center;gap:14px;margin:34px 0 10px}
+.seven span{width:14px;height:14px;border-radius:50%;background:var(--purple);box-shadow:0 0 10px var(--purple),0 0 24px var(--violet)}
+.seven span:nth-child(even){background:var(--pink);box-shadow:0 0 10px var(--pink),0 0 24px var(--pink)}
+.sticker{display:inline-block;padding:7px 18px;border-radius:999px;font-weight:700;font-size:.9rem;color:var(--night);border:3px solid var(--lav);box-shadow:0 5px 14px rgba(0,0,0,.5);transform:rotate(var(--r,0deg));white-space:nowrap}
+.s-pink{background:var(--pink)}.s-purple{background:var(--purple)}.s-gold{background:var(--gold)}.s-lav{background:var(--lav);color:var(--violet)}.s-violet{background:var(--violet);color:#fff}
+.stickers{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:28px}
+.deco{position:absolute;pointer-events:none}
+.deco svg{width:100%;height:100%;fill:currentColor;filter:drop-shadow(0 0 8px currentColor)}
+.d1{color:var(--pink);width:46px;height:46px;left:8%;top:22%;transform:rotate(-12deg)}
+.d2{color:var(--gold);width:32px;height:32px;right:10%;top:18%}
+.d3{color:var(--purple);width:30px;height:30px;right:18%;bottom:20%;transform:rotate(14deg)}
+.d4{color:var(--lav);width:26px;height:26px;left:16%;bottom:16%}
+.d5{color:var(--pink);width:34px;height:34px;left:4%;bottom:34%}
+.d6{color:var(--gold);width:26px;height:26px;right:4%;bottom:42%}
+.ls{position:absolute;width:70px;right:5%;top:50%;transform:rotate(12deg)}
+.ls.l{left:4%;right:auto;top:62%;transform:rotate(-12deg);width:56px}
+
+/* sections */
+section{padding:60px 0;border-top:1px solid var(--line)}
+h2{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(2rem,6vw,2.7rem);line-height:1.15;text-shadow:0 0 20px rgba(181,123,255,.7);margin-bottom:6px}
+.sub{color:var(--muted);margin-bottom:26px}
+.lead{font-size:1.15rem;max-width:62ch}
+.lead+.lead{margin-top:14px}
+.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:30px}
+.card{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--c,var(--purple));border-radius:14px;padding:16px 20px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.card small{display:block;color:var(--c,var(--purple));font-weight:700}
+.card b{font-size:1.1rem}
+.banner{margin-top:34px;text-align:center;padding:22px;border:1.5px solid var(--purple);border-radius:16px;background:#1a0e35;box-shadow:0 0 30px rgba(122,60,255,.35);font-family:Syne,sans-serif;font-weight:600;font-size:1.25rem}
+
+/* python */
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:start}
+.term{background:#0b0618;border:1.5px solid var(--purple);border-radius:14px;overflow:hidden;box-shadow:0 0 36px rgba(122,60,255,.3)}
+.bar{display:flex;gap:7px;align-items:center;padding:10px 14px;background:#1d1040;font-size:.8rem;color:var(--muted)}
+.bar i{width:10px;height:10px;border-radius:50%;display:block}
+pre{padding:18px;overflow-x:auto;font:500 .95rem/1.8 "Fira Code",monospace;color:var(--lav)}
+.k{color:var(--cyan)}.s{color:var(--pink)}.o{color:var(--purple)}
+.path{list-style:none;position:relative;margin-top:6px}
+.path:before{content:"";position:absolute;left:8px;top:10px;bottom:10px;border-left:3px dashed var(--line)}
+.path li{position:relative;padding:0 0 18px 40px}
+.path li:before{content:"";position:absolute;left:0;top:6px;width:19px;height:19px;border-radius:50%;background:var(--purple);border:2px solid var(--lav);box-shadow:0 0 14px var(--violet)}
+.path li.here:before{background:var(--pink);box-shadow:0 0 14px var(--pink)}
+.path b{display:block}.path span{color:var(--muted);font-size:.92rem}
+.path .sticker{margin-left:8px;font-size:.7rem;padding:2px 10px;vertical-align:middle}
+
+/* values */
+.vals{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:28px}
+.vals li{display:flex;gap:14px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.vals svg{flex:none;width:30px;height:30px;fill:var(--c);filter:drop-shadow(0 0 6px var(--c))}
+.vals b{display:block}.vals span{color:var(--muted);font-size:.92rem;line-height:1.4;display:block}
+
+/* quotes */
+.feature{background:#1a0e35;border:1.5px solid var(--purple);border-radius:16px;padding:26px 28px;font-family:Syne,sans-serif;font-weight:600;font-size:clamp(1.3rem,4vw,1.9rem);line-height:1.35;box-shadow:0 0 34px rgba(122,60,255,.3);margin-bottom:20px}
+.feature svg{color:var(--pink);width:1.1em;height:1.1em;margin-left:6px}
+.quotes{columns:2 260px;column-gap:16px}
+.quotes blockquote{break-inside:avoid;margin-bottom:16px;background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:12px;padding:16px 18px;font-style:italic}
+.note{margin-top:14px;color:var(--muted);font-size:.88rem}
+
+/* contact */
+.contact{text-align:center}
+.mail{display:inline-block;margin:22px 0 10px;padding:14px 28px;border:2px solid var(--purple);border-radius:999px;background:var(--panel);font-weight:700;font-size:1.1rem;text-decoration:none;overflow-wrap:anywhere;box-shadow:0 0 18px rgba(181,123,255,.5),inset 0 0 14px rgba(181,123,255,.15);transition:background .2s,box-shadow .2s}
+.mail:hover{background:rgba(181,123,255,.2);box-shadow:0 0 32px var(--violet)}
+.bigheart{width:70px;height:70px;fill:var(--pink);filter:drop-shadow(0 0 16px var(--pink));display:block;margin:30px auto 18px}
+footer{text-align:center;color:var(--muted);font-size:.9rem;padding:28px 24px 40px;border-top:1px solid var(--line)}
+
+@media(max-width:760px){.two{grid-template-columns:1fr}.ls,.d5,.d6{display:none}.hero{padding:60px 0}}
+@media(prefers-reduced-motion:reduce){h1{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/></symbol>
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.2l7.1-.6z"/></symbol>
+  <symbol id="spark" viewBox="0 0 24 24"><path d="M12 1c.8 6 5 10.2 11 11-6 .8-10.2 5-11 11-.8-6-5-10.2-11-11 6-.8 10.2-5 11-11z"/></symbol>
+  <symbol id="note" viewBox="0 0 24 24"><path d="M9 3v10.6A3.5 3.5 0 1 0 11 17V7l8-1.5v6.1A3.5 3.5 0 1 0 21 15V2z"/></symbol>
+  <symbol id="stick" viewBox="0 0 70 160">
+    <rect x="28" y="74" width="14" height="82" rx="6" fill="#2a1850" stroke="#e9dcff" stroke-width="2"/>
+    <rect x="25" y="66" width="20" height="9" rx="3" fill="#52308f" stroke="#e9dcff" stroke-width="2"/>
+    <circle cx="35" cy="35" r="30" fill="#b57bff" stroke="#e9dcff" stroke-width="3"/>
+    <circle cx="35" cy="35" r="21" fill="#7a3cff" opacity=".75"/>
+    <circle cx="35" cy="35" r="13" fill="none" stroke="#e9dcff" stroke-width="2.5"/>
+    <path d="M35 28l2 4.7 5 .4-3.8 3.3 1.2 5-4.4-2.7-4.4 2.7 1.2-5-3.8-3.3 5-.4z" fill="#e9dcff"/>
+  </symbol>
+</svg>
+
+<header><div class="wrap">
+  <a class="logo" href="#top">Lavanya</a>
+  <nav aria-label="Main"><a href="#about">About</a><a href="#python">Python</a><a href="#values">Goals</a><a href="#quotes">Quotes</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero">
+  <span class="deco d1"><svg><use href="#heart"/></svg></span>
+  <span class="deco d2"><svg><use href="#star"/></svg></span>
+  <span class="deco d3"><svg><use href="#note"/></svg></span>
+  <span class="deco d4"><svg><use href="#spark"/></svg></span>
+  <span class="deco d5"><svg><use href="#star"/></svg></span>
+  <span class="deco d6"><svg><use href="#heart"/></svg></span>
+  <svg class="ls" viewBox="0 0 70 160" aria-hidden="true"><use href="#stick"/></svg>
+  <svg class="ls l" viewBox="0 0 70 160" aria-hidden="true"><use href="#stick"/></svg>
+  <div class="wrap">
+    <span class="sticker s-purple" style="--r:-3deg">PORTFOLIO 2026</span>
+    <p class="hi" style="margin-top:22px">Hi, I'm</p>
+    <h1>Lavanya</h1>
+    <p class="goal">I want to become a software developer.</p>
+    <p class="where">B.E. CSE &middot; 1st year &middot; SRM Valliammai Engineering College</p>
+    <div class="seven" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="stickers">
+      <span class="sticker s-violet" style="--r:-6deg">PYTHON LEARNER</span>
+      <span class="sticker s-pink" style="--r:4deg">FUTURE DEVELOPER</span>
+      <span class="sticker s-gold" style="--r:-3deg">BORAHAE</span>
+      <span class="sticker s-lav" style="--r:5deg">I PURPLE YOU</span>
+    </div>
+  </div>
+</div>
+
+<section id="about"><div class="wrap">
+  <h2>About me <svg class="i" style="color:var(--pink)"><use href="#heart"/></svg></h2>
+  <p class="sub">A little hello from me</p>
+  <p class="lead">Hi! I'm Lavanya, a first-year B.E. Computer Science and Engineering student (CSE-2) at SRM Valliammai Engineering College.</p>
+  <p class="lead">I'm at the start of my coding journey, and I'm learning something new every day. My dream is to become a software developer.</p>
+  <p class="lead muted">I gave this portfolio a BTS theme because I like to put a little purple into everything I make.</p>
+  <div class="grid">
+    <div class="card" style="--c:var(--purple)"><small>Name</small><b>Lavanya</b></div>
+    <div class="card" style="--c:var(--pink)"><small>Course</small><b>B.E. Computer Science and Engineering (CSE-2)</b></div>
+    <div class="card" style="--c:var(--violet)"><small>College</small><b>SRM Valliammai Engineering College</b></div>
+    <div class="card" style="--c:var(--gold)"><small>Year</small><b>1st year</b></div>
+    <div class="card" style="--c:var(--cyan)"><small>Learning</small><b>Python</b></div>
+    <div class="card" style="--c:var(--pink)"><small>Goal</small><b>Software developer</b></div>
+  </div>
+</div></section>
+
+<section id="python"><div class="wrap">
+  <h2>Learning Python <span class="sticker s-gold" style="--r:5deg;font-size:.8rem;vertical-align:middle">JUST STARTED</span></h2>
+  <p class="sub">My first programming language</p>
+  <p class="lead" style="margin-bottom:28px">I've just started learning Python. I'm working through the basics one step at a time, and every small program I run makes me more excited to keep going.</p>
+  <div class="two">
+    <div class="term">
+      <div class="bar"><i style="background:var(--pink)"></i><i style="background:var(--gold)"></i><i style="background:var(--cyan)"></i>&nbsp; my_first_program.py</div>
+<pre><span class="k">name</span> <span class="o">=</span> <span class="s">"Lavanya"</span>
+<span class="k">goal</span> <span class="o">=</span> <span class="s">"software developer"</span>
+
+<span class="k">print</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">)</span>
+<span class="k">print</span><span class="o">(</span><span class="s">"I am"</span>, name<span class="o">)</span>
+<span class="k">print</span><span class="o">(</span><span class="s">"I want to be a"</span>, goal<span class="o">)</span></pre>
+    </div>
+    <ul class="path">
+      <li class="here"><b>Print and variables <span class="sticker s-pink">I AM HERE</span></b><span>Say hello to the world and store my first values.</span></li>
+      <li><b>Input and operators</b><span>Make programs that talk to the person using them.</span></li>
+      <li><b>Decisions with if and else</b><span>Teach my code to choose what to do.</span></li>
+      <li><b>Loops</b><span>Repeat things without writing them again and again.</span></li>
+      <li><b>Functions</b><span>Build small reusable pieces of code.</span></li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="values"><div class="wrap">
+  <h2>My goal and what I believe in</h2>
+  <p class="sub">Seven things I keep close while I learn</p>
+  <div class="banner">I want to become a software developer. <svg class="i" style="color:var(--pink)"><use href="#heart"/></svg></div>
+  <ul class="vals">
+    <li style="--c:var(--purple)"><svg><use href="#star"/></svg><div><b>Dream big</b><span>Every big project starts as a small idea.</span></div></li>
+    <li style="--c:var(--pink)"><svg><use href="#star"/></svg><div><b>Work hard</b><span>Practice a little every day, even on busy days.</span></div></li>
+    <li style="--c:var(--gold)"><svg><use href="#star"/></svg><div><b>Never give up</b><span>A bug is just a puzzle I haven't solved yet.</span></div></li>
+    <li style="--c:var(--cyan)"><svg><use href="#star"/></svg><div><b>Stay kind</b><span>Helping others learn makes me learn more too.</span></div></li>
+    <li style="--c:var(--purple)"><svg><use href="#star"/></svg><div><b>Keep learning</b><span>There is always one more thing to try and understand.</span></div></li>
+    <li style="--c:var(--pink)"><svg><use href="#star"/></svg><div><b>Believe in myself</b><span>I may be new, but I am growing every day.</span></div></li>
+    <li style="--c:var(--gold)"><svg><use href="#star"/></svg><div><b>Enjoy the journey</b><span>The learning itself is part of the fun.</span></div></li>
+  </ul>
+</div></section>
+
+<section id="quotes"><div class="wrap">
+  <h2>Words I live by <svg class="i" style="color:var(--pink)"><use href="#note"/></svg></h2>
+  <p class="sub">Original quotes I wrote to keep myself going</p>
+  <div class="feature">Dream in purple, code in practice, shine in your own light. <svg class="i"><use href="#heart"/></svg></div>
+  <div class="quotes">
+    <blockquote style="--c:var(--purple)">Every expert once wrote a first line of code and had no idea what they were doing.</blockquote>
+    <blockquote style="--c:var(--pink)">Bugs are not failures. They tell me where to practice.</blockquote>
+    <blockquote style="--c:var(--gold)">Slow progress is still progress. Keep running the program.</blockquote>
+    <blockquote style="--c:var(--cyan)">I am not behind. I am at the beginning of my own story.</blockquote>
+    <blockquote style="--c:var(--purple)">Seven small steps still reach the stage.</blockquote>
+    <blockquote style="--c:var(--pink)">Be kind to yourself. Even a computer needs a restart.</blockquote>
+    <blockquote style="--c:var(--gold)">Purple is not just a colour. It is a promise to keep going.</blockquote>
+    <blockquote style="--c:var(--cyan)">Today's Hello, world is tomorrow's big idea.</blockquote>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <span class="sticker s-pink" style="--r:-3deg;font-size:1rem">THANK YOU</span>
+  <h2 style="margin-top:18px">Let's connect</h2>
+  <p class="sub" style="margin-bottom:0">Thanks for visiting my portfolio. Send me an email and say hi.</p>
+  <a class="mail" href="mailto:Lavanyaabinaya40@gmail.com">Lavanyaabinaya40@gmail.com</a>
+  <svg class="bigheart" aria-hidden="true"><use href="#heart"/></svg>
+  <span class="sticker s-lav" style="--r:-4deg">I PURPLE YOU</span>
+</div></section>
+</main>
+
+<footer>&copy; 2026 Lavanya &middot; B.E. CSE &middot; SRM Valliammai Engineering College</footer>
+</body>
+</html>
