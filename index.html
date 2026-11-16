@@ -20,9 +20,11 @@ svg.i{width:1em;height:1em;fill:currentColor;display:inline-block;vertical-align
 header{position:sticky;top:0;z-index:10;background:rgba(7,4,15,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
 .logo{font-family:Syne,sans-serif;font-weight:800;text-decoration:none;color:var(--pink)}
-nav{display:flex;gap:18px;flex-wrap:wrap}
+nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
 nav a{text-decoration:none;color:var(--muted);font-size:.95rem}
 nav a:hover{color:var(--purple);text-shadow:0 0 12px var(--violet)}
+.blogbtn{border:2px solid var(--pink);border-radius:999px;padding:2px 16px;color:var(--text)}
+nav a.blogbtn:hover{background:var(--pink);color:var(--night);text-shadow:none}
 
 /* hero */
 .hero{position:relative;text-align:center;padding:90px 0 80px;overflow:hidden}
@@ -118,7 +120,7 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:28px 24px 40
 
 <header><div class="wrap">
   <a class="logo" href="#top">Lavanya</a>
-  <nav aria-label="Main"><a href="#about">About</a><a href="#python">Python</a><a href="#values">Goals</a><a href="#quotes">Quotes</a><a href="#contact">Contact</a></nav>
+  <nav aria-label="Main"><a href="#about">About</a><a href="#python">Python</a><a href="#values">Goals</a><a href="#quotes">Quotes</a><a href="#contact">Contact</a><a class="blogbtn" href="blog.html">Blog</a></nav>
 </div></header>
 
 <main id="top">
